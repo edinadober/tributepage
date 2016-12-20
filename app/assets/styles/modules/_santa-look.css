@@ -1,0 +1,90 @@
+.santa-look {
+	border-bottom: 10px solid $mainGold;
+	position: relative;
+
+	&__image {
+		display: block;
+	}
+
+
+	&__text-content {
+		position: absolute;
+		top: -5%;
+		right: -20%;
+		width: 100%;
+		text-align: center;
+	}
+
+	&__title {
+		color: $mainGold;
+		font-weight: 400;
+		font-size: 1.5rem;
+		text-shadow: 1px 1px 0 rgb(248,168,72);
+
+		@mixin atSmall {
+			font-size: 2.6rem;
+		}
+
+		@mixin atMedium {
+			font-size: 3.5rem;
+		}
+
+		@mixin atLarge {
+			font-size: 6rem;
+		}
+	}
+
+	&__quote {
+		color: $mainGold;
+		font-weight: 400;
+		font-size: 0.6rem;
+		text-shadow: 2px 2px 0 rgba(0, 0, 0, .15); /*Text shadow is black and only 15% visible*/
+		/*margin: 0; The vertical distance between the title and the quote. */
+		max-width: 10rem; /*Brakes the quote into three lines.*/
+		margin-left: auto;
+		margin-right: auto;
+
+		@mixin atSmall {
+			font-size: 1.1rem;
+			max-width: 20rem;
+			margin-right: auto;
+			margin-left: auto;
+		}
+
+		@mixin atMedium {
+			font-size: 1.6rem;
+			max-width: 30rem;
+		}
+
+		@mixin atLarge {
+			font-size: 2.8rem;
+			max-width: 50rem;
+		}
+
+		
+	}
+
+	&__signature {
+		color: $mainGold;
+		font-weight: 400;
+		font-size: 1.5rem;
+		text-shadow: 1px 1px 0 rgb(248,168,72);
+		max-width: 25rem;
+		margin: 0;
+		margin-left: auto;
+		margin-right: auto;
+
+		@mixin atSmall {
+			font-size: 2.6rem;
+		}
+
+		@mixin atMedium {
+			font-size: 3.5rem;
+		}
+
+		@mixin atLarge {
+			font-size: 6rem;
+			max-width: 50rem;
+		}
+}
+}
