@@ -1,0 +1,12 @@
+.testimonials {
+	background-color: rgba(255, 255, 255, .7);
+	padding: 0 1.8125rem 1px 1.8125rem;
+	border-radius: 2%;
+
+&__title {
+	text-align: center;
+	font-size: 1.5rem;
+	font-weight: 500;
+	margin: 0;
+}
+}

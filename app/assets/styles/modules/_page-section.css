@@ -9,4 +9,9 @@
 		background-color: $mainRed;
 		color: $mainWhite;
 	}
+
+	&--background {
+		background: url('/assets/images/christmas-scene-cropped.jpg') top center no-repeat;
+		background-size: cover;
+	}
 }

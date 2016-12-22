@@ -1,5 +1,5 @@
 .headline {
-	font-weight: 300;
+	font-weight: 500;
 	font-size: 1.9rem;
 	color: $mainRed;
 
@@ -11,7 +11,20 @@
 		text-align: center;
 	}
 
+	&--centered__smallscreen {
+
+		text-align: center;
+
+		@mixin atMedium {
+			text-align: left;
+		}
+	}
+
 	&--white {
 		color: $mainWhite;
+	}
+
+	&--no-t-margin {
+		margin-top: 0;
 	}
 }

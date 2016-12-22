@@ -470,8 +470,12 @@ img {
 	height: auto;
 }
 
+* {
+	box-sizing: border-box;
+}
+
 .santa-look {
-	border-bottom: 10px solid rgb(248,168,72);
+	border-bottom: 10px solid rgb(187,3,3);
 	position: relative;
 }
 
@@ -482,17 +486,20 @@ img {
 .santa-look__text-content {
   position: absolute;
   top: -5%;
-  right: -20%;
+  right: auto;
   width: 100%;
   text-align: center;
 }
 
 .santa-look__title {
-  color: rgb(248,168,72);
-  font-weight: 400;
-  font-size: 1.5rem;
-  text-shadow: 1px 1px 0 rgb(248,168,72);
+  color: rgb(13,5,3);
+  font-weight: 500;
+  font-size: 1.8rem;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+/*text-shadow: 1px 1px 0 rgb(248,168,72);*/
 
 @media (min-width: 530px) {
 
@@ -516,10 +523,9 @@ img {
 }
 
 .santa-look__quote {
-  color: rgb(248,168,72);
+  color: rgb(13,5,3);
   font-weight: 400;
-  font-size: 0.6rem;
-  text-shadow: 2px 2px 0 rgba(0, 0, 0, .15);/*Text shadow is black and only 15% visible*//*margin: 0; The vertical distance between the title and the quote. */
+  font-size: 0.6rem;/*text-shadow: 2px 2px 0 rgba(0, 0, 0, .15); Text shadow is black and only 15% visible*//*margin: 0; The vertical distance between the title and the quote. */
   max-width: 10rem;/*Brakes the quote into three lines.*/
   margin-left: auto;
   margin-right: auto;
@@ -552,10 +558,9 @@ img {
 }
 
 .santa-look__signature {
-  color: rgb(248,168,72);
-  font-weight: 400;
-  font-size: 1.5rem;
-  text-shadow: 1px 1px 0 rgb(248,168,72);
+  color: rgb(13,5,3);
+  font-weight: 500;
+  font-size: 1.8rem;/*text-shadow: 1px 1px 0 rgb(248,168,72);*/
   max-width: 25rem;
   margin: 0;
   margin-left: auto;
@@ -585,9 +590,10 @@ img {
 }
 
 .wrapper {
+	overflow: hidden;
 	padding-left: 18px;
 	padding-right: 18px;
-	max-width: 1200px;
+	max-width: 1236px;
 	margin-right: auto;
 	margin-left: auto;
 }
@@ -599,6 +605,17 @@ img {
 .wrapper .wrapper {
   padding-left: 0;
   padding-right: 0;
+}
+
+.wrapper--b-margin {
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 530px) {
+
+  .wrapper--b-margin {
+    margin-bottom: 3.875rem;
+  }
 }
 
 .page-section {
@@ -619,8 +636,13 @@ img {
   color: rgb(240,198,176);
 }
 
+.page-section--background {
+  background: url('/assets/images/christmas-scene-cropped.jpg') top center no-repeat;
+  background-size: cover;
+}
+
 .headline {
-	font-weight: 300;
+	font-weight: 500;
 	font-size: 1.9rem;
 	color: rgb(187,3,3);
 }
@@ -636,7 +658,109 @@ img {
   text-align: center;
 }
 
+.headline--centered__smallscreen {
+  text-align: center;
+}
+
+@media (min-width: 800px) {
+
+  .headline--centered__smallscreen {
+    text-align: left;
+  }
+}
+
 .headline--white {
   color: rgb(240,198,176);
+}
+
+.headline--no-t-margin {
+  margin-top: 0;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.row--gutters {
+  margin-right: -65px;
+}
+
+.row--gutters > div {
+  padding-right: 65px;
+}
+
+.row__b-margin-until-medium {
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 800px) {
+
+  .row__b-margin-until-medium {
+    margin-bottom: 0;
+  }
+
+  .row__medium-4 {
+    float: left;
+    width: 33%;
+  }
+
+  .row__medium-4--larger {
+    width: 37%;
+  }
+
+  .row__medium-8 {
+    float: left;
+    width: 66%;
+  }
+
+  .row__medium-8--smaller {
+    width: 63%;
+  }
+}
+
+/*Begin Equal height rules.*/
+
+@media (min-width: 800px) {
+
+  .row--equal-height-at-medium {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.row--equal-height-at-medium > div {
+  float: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.generic-content-container p {
+  line-height: 1.65;
+  font-size: 1rem;/*That is the default size anyway, I just leave it here for study purposes.*/
+  margin: 1.8rem 0;
+}
+
+@media (min-width: 530px) {
+
+  .generic-content-container p {
+    font-size: 1.125rem;
+  }
+}
+
+.testimonials {
+	background-color: rgba(255, 255, 255, .7);
+	padding: 0 1.8125rem 1px 1.8125rem;
+	border-radius: 2%;
+}
+
+.testimonials__title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0;
 }
 
